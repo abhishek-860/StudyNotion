@@ -66,7 +66,7 @@ const getAllUserDetails = async (req, res) => {
       } catch (error) {
             return res.status(500).json({
                   success: false,
-                  message:'Account Detailed failed to fetch',
+                  message:'Account Detailed failed to Fetch',
                   error: error.message,
             });
       }

@@ -1,4 +1,4 @@
-const Tag = require("../models/Tags");
+const Tag = require("../models/Category");
 exports.createCategory = async (req, res) => {
       try {
             const {name, description} = req.body;
