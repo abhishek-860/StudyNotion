@@ -6,8 +6,8 @@ const {
 } = require("../controller/Course");
 
 const {
-      showAllCategories, createCategory, categoryPageDetails,
-} = require("../controller/Section");
+      showAllCategory, createCategory, categoryPageDetails,
+} = require("../controller/Category");
 
 const {
       createSection, updateSection, deleteSection, 
@@ -59,7 +59,7 @@ router.post("/updateCourseProgress", auth, isInstructor, updateCourseProgress);
 
 router.post("/createCategory", auth, isAdmin, createCategory);
 
-router.get("/showAllCategories", showAllCategories);
+router.get("/showAllCategories", showAllCategory);
 
 router.post("/getCategoryPageDetails", categoryPageDetails);
 

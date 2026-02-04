@@ -45,22 +45,6 @@ exports.isStudent = async (req, res, next) => {
             });
       }
 }
-exports.isInstructor = async (req, res, next) => {
-      try {
-            if (req.user.accountType !== 'Instructor') {
-                  return res.status(401).json({
-                        success:false,
-                        message:'This is a protected route for Instructor only'
-                  });
-            }
-            next();
-      } catch (error) {
-            return res.status(401).json({
-                  success: false,
-                  message:'role is not verified'
-            });
-      }
-}
 exports.isAdmin = async (req, res, next) => {
       try {
             if (req.user.accountType !== 'Admin') {

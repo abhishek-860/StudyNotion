@@ -5,6 +5,7 @@ const Course = require("../models/Course");
 const { uploadImageToCloudinary } = require("../utils/imageUploader");
 const mongoose = require("mongoose");
 const { convertSecondsToDuration } = require("../utils/secToDuration");
+
 exports.updateProfile = async(req, res) => {
       try {
             const {firstName = "", lastName = "",dateOfBirth="", about="", contactNumber, gender} = req.body;
@@ -104,7 +105,6 @@ exports.updateDisplayPicture = async (req, res) => {
     })
   }
 }
-
 exports.getEnrolledCourses = async (req, res) => {
   try {
     const userId = req.user.id
@@ -170,7 +170,6 @@ exports.getEnrolledCourses = async (req, res) => {
     })
   }
 }
-
 exports.instructorDashboard = async (req, res) => {
   try {
     const courseDetails = await Course.find({ instructor: req.user.id })
